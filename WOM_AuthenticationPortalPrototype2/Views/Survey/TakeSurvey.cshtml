@@ -2,6 +2,243 @@
 @{
     ViewData["Title"] = "TakeSurvey";
 }
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
-<h1>TakeSurvey</h1>
+<style type="text/css">
+    .form-style-10 {
+        width: 450px;
+        padding: 30px;
+        margin: 40px auto;
+        background: #FFF;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    }
 
+        .form-style-10 .inner-wrap {
+            padding: 30px;
+            background: #F8F8F8;
+            border-radius: 6px;
+            margin-bottom: 15px;
+
+        }
+
+        .form-style-10 h1 {
+            background: #2A88AD;
+            padding: 20px 30px 15px 30px;
+            margin: -30px -30px 30px -30px;
+            border-radius: 10px 10px 0 0;
+            -webkit-border-radius: 10px 10px 0 0;
+            -moz-border-radius: 10px 10px 0 0;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+            font: normal 30px 'Bitter', serif;
+            -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            border: 1px solid #257C9E;
+        }
+
+            .form-style-10 h1 > span {
+                display: block;
+                margin-top: 2px;
+                font: 13px Arial, Helvetica, sans-serif;
+            }
+
+        .form-style-10 label {
+            display: block;
+            font: 13px Arial, Helvetica, sans-serif;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .form-style-10 input[type="text"],
+        .form-style-10 input[type="date"],
+        .form-style-10 input[type="datetime"],
+        .form-style-10 input[type="email"],
+        .form-style-10 input[type="number"],
+        .form-style-10 input[type="search"],
+        .form-style-10 input[type="time"],
+        .form-style-10 input[type="url"],
+        .form-style-10 input[type="tel"],
+        .form-style-10 input[type="password"],
+        .form-style-10 textarea,
+        .form-style-10 select {
+            display: block;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border: 2px solid #fff;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+            -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+            -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+        }
+
+        .form-style-10 .section {
+            font: normal 20px 'Bitter', serif;
+            color: #2A88AD;
+            margin-bottom: 5px;
+        }
+
+            .form-style-10 .section span {
+                background: #2A88AD;
+                padding: 5px 10px 5px 10px;
+                position: absolute;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border: 4px solid #fff;
+                font-size: 14px;
+                margin-left: -45px;
+                color: #fff;
+                margin-top: -3px;
+            }
+
+        .form-style-10 input[type="button"],
+        .form-style-10 input[type="submit"] {
+            background: #2A88AD;
+            padding: 8px 20px 8px 20px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+            font: normal 30px 'Bitter', serif;
+            -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+            border: 1px solid #257C9E;
+            font-size: 15px;
+        }
+
+            .form-style-10 input[type="button"]:hover,
+            .form-style-10 input[type="submit"]:hover {
+                background: #2A6881;
+                -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+                -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+                box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+            }
+
+        .form-style-10 .privacy-policy {
+            float: right;
+            width: 250px;
+            font: 12px Arial, Helvetica, sans-serif;
+            color: #4D4D4D;
+            margin-top: 10px;
+            text-align: right;
+        }
+</style>
+
+<div class="form-style-10">
+    <h1>Sign Up Now!<span>Sign up and tell us what you think of the site!</span></h1>
+    <form action="./SurveyFeedback" method="post">
+        <div class="section"><span>1</span>Personal Information</div>
+        <div class="inner-wrap">
+            <label>First Name* <input type="text" name="firstName" /></label>
+            <label>Last Name* <input type="text" name="lastName" /></label>
+            <label>Date of Birth <input type="date" name="dateOfBirth" /></label>
+            <label>Gender <input type="text" name="gender" /></label>
+        </div>
+        <div class="section"><span>2</span>Contact Information</div>
+        <div class="inner-wrap">
+            <label>Email Address* <input type="email" name="emailAddress" /></label>
+            <label>Confirm Email Address* <input type="email" name="confirmEmailAddress" /></label>
+            <label>Phone Number* <br /><input type="tel" name="phoneNumber" /></label>
+            <label>Street Address* <textarea name="streetAddress1"></textarea></label>
+            <label>Apt/ Suite/ Other <textarea name="streetAddress2"></textarea></label>
+            <label>Province / Region* <input type="text" name="province" /></label>
+            <label>City* <input type="text" name="city" /></label>
+            <label>Postal Code* <input type="text" name="postalCode" /></label>
+            <label>Country* <input type="text" name="country" /></label>
+            <label>Website <input type="text" name="ownWebsite" /></label>
+            <label>Profile Link <input type="url" name="profileLink" /></label>
+        </div>
+        <div class="section"><span>3</span>Venture Information</div>
+        <div class="inner-wrap">
+            <label>Venture Name* <input type="text" name="ventureName" /></label>
+            <label>Industry /Support Area* <input type="text" name="industryArea" /></label>
+            <label>Stage of Venture* <input type="text" name="ventureStage" /></label>
+            <label>Type of Venture* <input type="text" name="ventureType" /></label>
+            <label>Website <input type="text" name="ventureWebsite" /></label>
+            <label>Date of Founding* <input type="date" name="dateOfFounding" /></label>
+            <label>How did you hear about AI sales coaching program?* <textarea name="heardFrom"></textarea></label>
+        </div>
+        <div class="section"><span>4</span>Venture Information</div>
+        <div class="inner-wrap">
+            <label>Which programs are you actively engaged with to help your drive sales? <textarea name="activePrograms"></textarea></label>
+            <label>Do you have a working prototype or MVP?* <input type="text" name="prototype" /></label>
+            <label>Do you have any paying customers?* <input type="text" name="havePayingCustomers" /></label>
+            <label>Do you have any non-paying users/customers?*  <input type="text" name="haveNonpayingCustomers" /></label>
+            <label>Do you have any patents filed/ granted?*  <input type="text" name="havePatentsFiled" /></label>
+            <label>No. of patents filed?* <input type="number" name="noPatentsFiled" /></label>
+            <label>No. of patents granted?* <input type="number" name="noPatentsGranted" /></label>
+            <label>What is your annual revenue for the past year?* <input type="number" name="noPatentsGranted" /></label>
+            <label>Please describe the ownership of the patents* <textarea name="ownership"></textarea></label>
+            
+        </div>
+        <div class="section"><span>5</span>Venture Information</div>
+        <div class="inner-wrap">
+            <label>Have you received any external funding? * <input type="text" name="haveExternalFunding"  placeholder="including friends & family, angels, VCs, grants, loans, crowdfunding, ICO, etc." /></label>
+            <label>Please provide the details of the funding you've received:* <input type="text" name="receivedFundDetails" /></label>
+            <label>Is your start-up an extension of, or a spin-off from another business/organization? * <input type="text" name="isExtentionBusiness" placeholder="including friends & family, angels, VCs, grants, loans, crowdfunding, ICO, etc." /></label>
+            <label>Provide the name of your parent organization * <input type="text" name="parentOrganization" placeholder="including friends & family, angels, VCs, grants, loans, crowdfunding, ICO, etc." /></label>
+        </div>
+        <div class="section"><span>6</span>Venture Description</div>
+        <div class="inner-wrap">
+            <label>Quick Pitch*  <textarea name="quickPitch" placeholder="Briefly describe your venture - 25 words"></textarea></label>
+            <label>Product /Service Overview* <textarea name="productOverview" placeholder="Describe how does your product or service work - 100 words" ></textarea></label>
+            <label>Target Customers * <textarea name="targetCustomers" placeholder="Describe who are your target customers - 100 words" ></textarea></label>
+            <label>Revenue Model* <textarea name="revenueModel" placeholder="Describe how does your venture generate revenue - 100 words" ></textarea></label>
+            <label>Current & Future Competitors* <textarea name="currentCompetitors" placeholder="Describe who are your current competitors and your future anticipated competitors - 100 words" ></textarea></label>
+            <label>Competitive Advantage* <textarea name="compititiveAdvantage" placeholder="Explain what differentiates you from your competitors - 100 words" ></textarea></label>
+            <label>Protection against imitators* <textarea name="protectionPlan" placeholder="Explain how you plan to protect your venture from imitators - 100 words"></textarea></label>
+            <label>How do you think the AI Sales Coaching Program can help you succeed?* <textarea type="text" name="helpWithAI" ></textarea></label>
+        </div>
+        <div class="section"><span>7</span>Social Enterprise Questions</div>
+        <div class="inner-wrap">
+            <label>What is the social mission for your not-for-profit/social enterprise/co-operative? * <textarea name="socialMission" placeholder="Your mission will include an action verb, a target population, and an outcome that implies something to measure. - 50 words" ></textarea></label>
+            <label>Describe how your venture is going to fulfill your social mission and how will you know you are successful:* <textarea name="helpFromVenture" ></textarea></label>
+        </div>
+        <div class="section"><span>8</span>Personnel / Team Information </div>
+        <div class="inner-wrap">
+            <label>Number of co-founders* <input type="number" name="noOfCoFounders" placeholder="Total number of all equity sharing co-founders, not including employees, contractors, advisors or volunteers"  /></label>
+            <label>How many non-co founder team members do you have?* <input type="number" name="noOfNonCoFounders" placeholder="Include any employees, and contractors. Do NOT include co-founders, mentors, volunteers or advisors." /></label>
+        </div>
+        <div class="section"><span>9</span>Sales Effort </div>
+        <div class="inner-wrap">
+            <label>Who is responsible for selling? <input type="text" name="sellingResponsible" /></label>
+            <label>What is their level of professional sales experience? <input type="text" name="experienceLevel" /></label>
+            <label>What are the major sales challenges? <input type="text" name="salesChallenges" /></label>
+            <label>How long is the sales cycle? <input type="number" name="salesCylceDuration" /></label>
+            <label>What is the average revenue per sale? <input type="text" name="avgRevenure" /></label>
+            <label>How much client “live” conversation is involved in your pre-sales activities? <input type="text" name="involvedClientConversation" /></label>
+            <label>Do you sell directly over the phone? <input type="text" name="sellByPhone" /></label>
+            <label>Do you sell directly in face to face settings? <input type="text" name="faceToFaceSelling" /></label>
+            <label>What are the titles of your primary decision makers?  <input type="text" name="decisionmakersTitles" /></label>
+            <label>How many prospects does the salesperson manage? <input type="text" name="prospectsBySalesperson" /></label>
+            <label>Do you use a CRM solution?  <input type="text" name="crmSolution" /></label>
+            <label>What are the main steps in your sales process? <input type="text" name="mainSteps" /></label>
+            <label>What are your annual sales targets? <input type="text" name="salesTarget" /></label>
+            <label>How often do you meet or exceed your monthly sales targets?  <input type="text" name="meetMonthlySalesTarget" /></label>
+            <label>How often do you meet or exceed your annual sales targets? <input type="text" name="meetAnnualSalesTarget" /></label>
+            <label>How much do you wish to grow your sales by? <textarea name="meetAnnualSalesTarget"></textarea> </label>
+            <label>Waiver * <textarea name="waiver"></textarea></label>
+
+        </div>
+
+        <div class="button-section">
+            <input type="submit" name="Submit" asp-controller="Survey" asp-action="SurveyFeedback" />
+            <span class="privacy-policy">
+                <input type="checkbox" name="agreed">You agree to our Terms and Policy.
+            </span>
+        </div>
+    </form>
+</div>

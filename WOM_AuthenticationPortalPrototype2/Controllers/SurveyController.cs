@@ -12,12 +12,15 @@ namespace WOM_AuthenticationPortalPrototype2.Controllers
         {
             return View();
         }
+
         public IActionResult TakeSurvey()
         {
-            
             return View();
+        }
 
-
+        public IActionResult SurveyFeedback()
+        {
+            return View();
         }
 
         public static int getFirstQuestion(int surveyID)
